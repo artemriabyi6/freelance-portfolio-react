@@ -7,6 +7,11 @@ import california from "./../img/projects/California.png"
 import minimal from "./../img/projects/Minimal.png"
 import healthcare from "./../img/projects/HealthCare.png"
 import john from "./../img/projects/John.png"
+import victoria from './../img/projects/Victoria.png'
+import skyView from './../img/projects/SkyView.png'
+import trekta from './../img/projects/Trekta.png'
+import rollGo from './../img/projects/Roll-go.png'
+
 
 
 
@@ -50,14 +55,14 @@ const projects = [
 		skills: 'Vue JS, Node.js, MongoDB',
 		gitHubLink: 'https://github.com/artemriabyi6/Minimal-',
 	},
-	{
-		title: 'California',
-		img: california,
-		imgBig: california,
-		skills: 'React Native',
-		gitHubLink: 'https://github.com/artemriabyi6/California',
+	// {
+	// 	title: 'California',
+	// 	img: california,
+	// 	imgBig: california,
+	// 	skills: 'React Native',
+	// 	gitHubLink: 'https://github.com/artemriabyi6/California',
 
-	},
+	// },
 	{
 		title: 'Healthcare',
 		img: healthcare,
@@ -70,8 +75,45 @@ const projects = [
 		title: 'John',
 		img: john,
 		imgBig: john,
-		skills: 'React, PHP, MySql',
+		skills: 'HTML',
 		gitHubLink: 'https://github.com/artemriabyi6/John',
+
+	},
+	{
+		title: 'Trekta',
+		img: trekta,
+		imgBig: trekta,
+		skills: 'React, SCSS',
+		gitHubLink: 'https://github.com/artemriabyi6/trekta',
+		website: "https://artemriabyi6.github.io./trekta/",
+
+	},
+	{
+		title: 'Roll & GO',
+		img: rollGo,
+		imgBig: rollGo,
+		skills: 'React, SCSS',
+		gitHubLink: 'https://github.com/artemriabyi6/Roll-Go',
+		website: "https://artemriabyi6.github.io./Roll-Go/",
+
+
+	},
+	{
+		title: 'Victoria',
+		img: victoria,
+		imgBig: victoria,
+		skills: 'React, CSS',
+		gitHubLink: 'https://github.com/artemriabyi6/victoria',
+		website: "https://artemriabyi6.github.io./victoria/",
+
+	},
+	{
+		title: 'SkyView',
+		img: skyView,
+		imgBig: skyView,
+		skills: 'React, Redux, SCSS',
+		gitHubLink: 'https://github.com/artemriabyi6/skyview',
+		website: "https://artemriabyi6.github.io./skyview/",
 
 	},
 ];
