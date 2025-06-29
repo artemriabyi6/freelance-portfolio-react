@@ -1,35 +1,66 @@
 import "./style.css";
+import { motion } from "framer-motion";
 
+import linkedIn from "./../../img/icons/linkedIn.svg";
+import gitHub from "./../../img/icons/gitHub.svg";
 
-import instagram from './../../img/icons/instagram.svg';
-import twitter from './../../img/icons/twitter.svg';
-import linkedIn from './../../img/icons/linkedIn.svg';
-import gitHub from './../../img/icons/gitHub.svg';
+const containerVariants = {
+	initial: {},
+	animate: {
+		transition: {
+			staggerChildren: 0.2,
+		},
+	},
+};
+
+const itemVariants = {
+	initial: { opacity: 0, y: 20 },
+	animate: {
+		opacity: 1,
+		y: 0,
+		transition: { duration: 0.5, ease: "easeOut" },
+	},
+};
 
 const Footer = () => {
-    return (
+	return (
 		<footer className="footer">
 			<div className="container">
-				<div className="footer__wrapper">
-					<ul className="social">
-						<li className="social__item">
-							<a href="https://github.com/artemriabyi6" target="_blank">
-								<img src={gitHub} alt="Link" />
+				<motion.div
+					className="footer__wrapper"
+					variants={containerVariants}
+					initial="initial"
+					whileInView="animate"
+					viewport={{ once: true, amount: 0.3 }} // відсоток появи блоку у вʼюпорті
+				>
+					<motion.ul className="social" variants={containerVariants}>
+						<motion.li className="social__item" variants={itemVariants}>
+							<a
+								href="https://github.com/artemriabyi6"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<img src={gitHub} alt="GitHub" />
 							</a>
-						</li>
-						<li className="social__item">
-							<a href="https://www.linkedin.com/in/artem-riabyi-43a210372/" target="_blank">
-								<img src={linkedIn} alt="Link" />
+						</motion.li>
+						<motion.li className="social__item" variants={itemVariants}>
+							<a
+								href="https://www.linkedin.com/in/artem-riabyi-43a210372/"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<img src={linkedIn} alt="LinkedIn" />
 							</a>
-						</li>
-					</ul>
-					<div className="copyright">
+						</motion.li>
+					</motion.ul>
+
+					<motion.div className="copyright" variants={itemVariants}>
 						<p>© 2025 frontend-dev.com</p>
-					</div>
-				</div>
+					</motion.div>
+				</motion.div>
 			</div>
 		</footer>
 	);
-}
+};
 
 export default Footer;
